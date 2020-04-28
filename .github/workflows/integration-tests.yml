@@ -1,4 +1,4 @@
-name: Prise integration tests .net core 3.1
+name: Prise integration tests .net core 5.0
 
 on: [push]
 
@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         
-      - name: Setup .NET Core 3.1
+      - name: Setup .NET Core 5.0
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.101
+          dotnet-version: 5.0.100-preview.3.20216.6
 
         # Publishes all plugins to publish directory
       - run: dotnet publish src/Tests/IntegrationTestsPlugins/PluginA/PluginA.csproj -o publish/PluginA
@@ -27,16 +27,16 @@ jobs:
       - run: dotnet publish src/Tests/IntegrationTestsPlugins/LegacyPlugin1.5/LegacyPlugin1.5.csproj -o publish/LegacyPlugin1.5
 
       # Copies all published plugins to integration test directory
-      - run: mkdir -p src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginA src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginB src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginC src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginD src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginE src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginF src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/PluginG src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/LegacyPlugin1.4 src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
-      - run: cp -r publish/LegacyPlugin1.5 src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp3.1/Plugins
+      - run: mkdir -p src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginA src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginB src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginC src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginD src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginE src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginF src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/PluginG src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/LegacyPlugin1.4 src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
+      - run: cp -r publish/LegacyPlugin1.5 src/Tests/Prise.IntegrationTests/bin/Debug/netcoreapp5.0/Plugins
 
-      - name: Test Prise.IntegrationTests with netcoreapp3.1
+      - name: Test Prise.IntegrationTests with netcoreapp5.0
         run: dotnet test src/Tests/Prise.IntegrationTests/Prise.IntegrationTests.csproj
