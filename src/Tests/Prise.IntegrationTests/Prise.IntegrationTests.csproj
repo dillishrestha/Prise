@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>
-    <DefineConstants>NETCORE3_1</DefineConstants>
+    <DefineConstants>NET5_0</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

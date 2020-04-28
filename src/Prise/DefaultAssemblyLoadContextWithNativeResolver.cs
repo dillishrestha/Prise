@@ -1,4 +1,4 @@
-﻿#if NETCORE3_0 || NETCORE3_1
+﻿#if NETCORE3_0 || NETCORE3_1 || NET5_0
 using Prise.Infrastructure;
 using System;
 using System.IO;

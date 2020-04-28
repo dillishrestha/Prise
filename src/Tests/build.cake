@@ -117,6 +117,8 @@ Task("copy-to-testhost")
       CopyDirectory($"publish/{plugin}", $"Prise.IntegrationTestsHost/bin/debug/netcoreapp3.0/Plugins/{plugin}");
       CopyDirectory($"publish/{plugin}", $"Prise.IntegrationTests/bin/debug/netcoreapp3.1/Plugins/{plugin}");
       CopyDirectory($"publish/{plugin}", $"Prise.IntegrationTestsHost/bin/debug/netcoreapp3.1/Plugins/{plugin}");
+      CopyDirectory($"publish/{plugin}", $"Prise.IntegrationTests/bin/debug/netcoreapp5.0/Plugins/{plugin}");
+      CopyDirectory($"publish/{plugin}", $"Prise.IntegrationTestsHost/bin/debug/netcoreapp5.0/Plugins/{plugin}");
     }
 
     foreach (var plugin in multiPlatformPlugins)
@@ -127,6 +129,8 @@ Task("copy-to-testhost")
       CopyDirectory($"publish/netcoreapp3.0/{plugin}", $"Prise.IntegrationTestsHost/bin/debug/netcoreapp3.0/Plugins/{plugin}");
       CopyDirectory($"publish/netcoreapp3.1/{plugin}", $"Prise.IntegrationTests/bin/debug/netcoreapp3.1/Plugins/{plugin}");
       CopyDirectory($"publish/netcoreapp3.1/{plugin}", $"Prise.IntegrationTestsHost/bin/debug/netcoreapp3.1/Plugins/{plugin}");
+      CopyDirectory($"publish/netcoreapp3.1/{plugin}", $"Prise.IntegrationTests/bin/debug/netcoreapp5.0/Plugins/{plugin}");
+      CopyDirectory($"publish/netcoreapp3.1/{plugin}", $"Prise.IntegrationTestsHost/bin/debug/netcoreapp5.0/Plugins/{plugin}");
     }
 
     foreach (var plugin in networkPlugins)

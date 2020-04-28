@@ -9,7 +9,7 @@ var pluginBridgeVersion = "1.6.0";
 var mvcVersion = "1.6.0";
 var assemblyDiscoveryVersion = "1.6.0";
 var nugetSource = "https://api.nuget.org/v3/index.json";
-var betaVersion = "1";
+var betaVersion = "5";
 
 Task("build").Does( () =>
 { 
@@ -30,6 +30,11 @@ Task("build").Does( () =>
         Configuration = "Release",
         Framework = "netcoreapp3.1"
     };
+    var netcoreapp5_0 = new DotNetCoreBuildSettings
+    {
+        Configuration = "Release",
+        Framework = "netcoreapp5.0"
+    };
 
     var netstandard2 = new DotNetCoreBuildSettings
     {
@@ -45,20 +50,25 @@ Task("build").Does( () =>
     DotNetCoreBuild("Prise.AssemblyScanning.Discovery/Prise.AssemblyScanning.Discovery.csproj", netcoreapp2);
     DotNetCoreBuild("Prise.AssemblyScanning.Discovery/Prise.AssemblyScanning.Discovery.csproj", netcoreapp3);
     DotNetCoreBuild("Prise.AssemblyScanning.Discovery/Prise.AssemblyScanning.Discovery.csproj", netcoreapp3_1);
+    DotNetCoreBuild("Prise.AssemblyScanning.Discovery/Prise.AssemblyScanning.Discovery.csproj", netcoreapp5_0);
     DotNetCoreBuild("Prise.MVC/Prise.MVC.csproj", netcoreapp2);
     DotNetCoreBuild("Prise.MVC/Prise.MVC.csproj", netcoreapp3);
     DotNetCoreBuild("Prise.MVC/Prise.MVC.csproj", netcoreapp3_1);
+    DotNetCoreBuild("Prise.MVC/Prise.MVC.csproj", netcoreapp5_0);
     DotNetCoreBuild("Prise.Plugin/Prise.Plugin.csproj", netstandard2);
     DotNetCoreBuild("Prise.Plugin/Prise.Plugin.csproj", netstandard2_1);
     DotNetCoreBuild("Prise.Proxy/Prise.Proxy.csproj", netcoreapp2);
     DotNetCoreBuild("Prise.Proxy/Prise.Proxy.csproj", netcoreapp3);
     DotNetCoreBuild("Prise.Proxy/Prise.Proxy.csproj", netcoreapp3_1);
+    DotNetCoreBuild("Prise.Proxy/Prise.Proxy.csproj", netcoreapp5_0);
     DotNetCoreBuild("Prise.PluginBridge/Prise.PluginBridge.csproj", netcoreapp2);
     DotNetCoreBuild("Prise.PluginBridge/Prise.PluginBridge.csproj", netcoreapp3);
+    DotNetCoreBuild("Prise.PluginBridge/Prise.PluginBridge.csproj", netcoreapp5_0);
     DotNetCoreBuild("Prise.PluginBridge/Prise.PluginBridge.csproj", netcoreapp3_1);
     DotNetCoreBuild("Prise/Prise.csproj", netcoreapp2);
     DotNetCoreBuild("Prise/Prise.csproj", netcoreapp3);
     DotNetCoreBuild("Prise/Prise.csproj", netcoreapp3_1);
+    DotNetCoreBuild("Prise/Prise.csproj", netcoreapp5_0);
 });
 
 private DotNetCorePackSettings GetPackSettings(string version, string betaVersion = null){

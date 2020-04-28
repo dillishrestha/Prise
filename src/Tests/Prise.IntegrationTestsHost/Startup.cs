@@ -190,7 +190,7 @@ namespace Prise.IntegrationTestsHost
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-#if NETCORE3_0 || NETCORE3_1
+#if NETCORE3_0 || NETCORE3_1 || NET5_0
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 #endif
 #if NETCORE2_1

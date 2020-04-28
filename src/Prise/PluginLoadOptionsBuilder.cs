@@ -237,7 +237,7 @@ namespace Prise
                 useCollectibleAssemblies,
                 nativeDependencyLoadPreference);
 
-#if NETCORE3_0 || NETCORE3_1
+#if NETCORE3_0 || NETCORE3_1 || NET5_0
             return this.WithAssemblyLoader<DefaultAssemblyLoaderWithNativeResolver<T>>();
 #endif
 #if NETCORE2_1
@@ -250,7 +250,7 @@ namespace Prise
         {
             this.assemblyLoadOptionsType = typeof(TType);
 
-#if NETCORE3_0 || NETCORE3_1
+#if NETCORE3_0 || NETCORE3_1 || NET5_0
             return this.WithAssemblyLoader<DefaultAssemblyLoaderWithNativeResolver<T>>();
 #endif
 #if NETCORE2_1
@@ -601,7 +601,7 @@ namespace Prise
             this.proxyCreator = new PluginProxyCreator<T>();
 
             // Use System.Text.Json in 3.0 and 3.1
-#if NETCORE3_0 || NETCORE3_1
+#if NETCORE3_0 || NETCORE3_1 || NET5_0
             this.parameterConverter = new JsonSerializerParameterConverter();
             this.resultConverter = new JsonSerializerResultConverter();
             this.assemblyLoaderType = typeof(DefaultAssemblyLoaderWithNativeResolver<T>);

@@ -13,7 +13,7 @@ namespace Prise.IntegrationTestsHost
 {
     public partial class Program
     {
-#if NETCORE3_0 || NETCORE3_1
+#if NETCORE3_0 || NETCORE3_1 || NET5_0
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
             var consoleConfig = new ConfigurationBuilder()
