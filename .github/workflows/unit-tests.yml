@@ -13,7 +13,7 @@ jobs:
       - name: Setup .NET Core 5.0
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.201
+          dotnet-version: 5.0.100-preview.4.20258.7
 
       - name: Test Prise.Tests with net5.0
         run: dotnet test src/Tests/Prise.Tests/Prise.Tests.csproj -f net5.0
