@@ -1,4 +1,3 @@
-﻿#if NETCORE3_0 || NETCORE3_1 || NET5_0
 using System;
 using System.IO;
 using System.Linq;
@@ -33,4 +32,3 @@ namespace Prise.AssemblyScanning.Discovery
         }
     }
 }
-#endif

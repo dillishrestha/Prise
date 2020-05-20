@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<!--<TargetFrameworks>netcoreapp3.1;netcoreapp3.0;netcoreapp2.1</TargetFrameworks>-->
-		<TargetFramework>netcoreapp5.0</TargetFramework>
+		<TargetFramework>net5.0</TargetFramework>
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 
@@ -15,7 +15,7 @@
 	<PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
 		<DefineConstants>NETCORE3_1</DefineConstants>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp5.0'">
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net5.0'">
 		<DefineConstants>NET5_0</DefineConstants>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
@@ -27,7 +27,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.0.0" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp5.0'">
+	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.0-preview.3.20215.14" />
 	</ItemGroup>

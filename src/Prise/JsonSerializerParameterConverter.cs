@@ -1,4 +1,3 @@
-#if NETCORE3_0 || NETCORE3_1 || NET5_0
 using System;
 using System.Text.Json;
 using Prise.Proxy;
@@ -31,4 +30,3 @@ namespace Prise
         }
     }
 }
-#endif
