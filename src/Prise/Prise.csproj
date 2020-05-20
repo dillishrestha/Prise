@@ -75,9 +75,9 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0-preview.3.20215.2" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0-preview.4.20251.6" />
 		<PackageReference Include="Microsoft.Extensions.DependencyModel" Version="5.0.0-preview.3-runtime.20214.6" />
-		<PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="5.0.0-preview.3.20214.6" />
+		<PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="5.0.0-preview.4.20251.6" />
 	</ItemGroup>
 
 	<PropertyGroup>

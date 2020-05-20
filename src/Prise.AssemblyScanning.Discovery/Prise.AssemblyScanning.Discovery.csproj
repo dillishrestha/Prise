@@ -27,7 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="System.Reflection.MetadataLoadContext" Version="5.0.0-preview.3.20214.6" />
+		<PackageReference Include="System.Reflection.MetadataLoadContext" Version="5.0.0-preview.4.20251.6" />
 	</ItemGroup>
 
 	<PropertyGroup>

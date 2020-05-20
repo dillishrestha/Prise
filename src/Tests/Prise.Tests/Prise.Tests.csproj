@@ -29,7 +29,7 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.0-preview.3.20215.14" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.0-preview.4.20257.10" />
 	</ItemGroup>
 
 	<ItemGroup>
