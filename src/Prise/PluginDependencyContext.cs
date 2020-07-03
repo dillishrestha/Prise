@@ -65,7 +65,7 @@ namespace Prise
                     DependencyName = type.Assembly.GetName()
                 });
 
-            var hostFramework = hostFrameworkProvider.ProvideHostFramwork();
+            var hostFramework = hostFrameworkProvider.ProvideHostFramework();
             var dependencyContext = GetDependencyContextFromPluginAssembly(pluginLoadContext, depsFileProvider);
             var pluginFramework = dependencyContext.Target.Framework;
             CheckFrameworkCompatibility(hostFramework, pluginFramework, ignorePlatformInconsistencies);
@@ -115,7 +115,7 @@ namespace Prise
                     DependencyName = type.Assembly.GetName()
                 });
 
-            var hostFramework = hostFrameworkProvider.ProvideHostFramwork();
+            var hostFramework = hostFrameworkProvider.ProvideHostFramework();
             var dependencyContext = await GetDependencyContextFromPluginAssemblyAsync(pluginLoadContext, depsFileProvider);
             var pluginFramework = dependencyContext.Target.Framework;
             CheckFrameworkCompatibility(hostFramework, pluginFramework, ignorePlatformInconsistencies);

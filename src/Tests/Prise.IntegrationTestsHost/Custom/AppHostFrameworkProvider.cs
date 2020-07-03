@@ -9,7 +9,7 @@ namespace Prise.IntegrationTestsHost
     /// </summary>
     public class AppHostFrameworkProvider : IHostFrameworkProvider
     {
-        public string ProvideHostFramwork() => typeof(AppHostFrameworkProvider).Assembly
+        public string ProvideHostFramework() => typeof(AppHostFrameworkProvider).Assembly
             .GetCustomAttribute<TargetFrameworkAttribute>()?
             .FrameworkName;
     }
