@@ -2,6 +2,6 @@
 {
     public interface IHostFrameworkProvider
     {
-        string ProvideHostFramwork();
+        string ProvideHostFramework();
     }
 }

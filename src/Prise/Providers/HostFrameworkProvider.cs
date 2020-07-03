@@ -5,10 +5,10 @@ using System.Runtime.Versioning;
 
 namespace Prise
 {
-    [DebuggerDisplay("{ProvideHostFramwork()}")]
+    [DebuggerDisplay("{ProvideHostFramework()}")]
     public class HostFrameworkProvider : IHostFrameworkProvider
     {
-        public virtual string ProvideHostFramwork() => Assembly
+        public virtual string ProvideHostFramework() => Assembly
             .GetEntryAssembly()?
             .GetCustomAttribute<TargetFrameworkAttribute>()?
             .FrameworkName;
